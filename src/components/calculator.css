@@ -1,0 +1,147 @@
+/* Enhanced calculator.css - Final Touches */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #e8f0fe, #f5f7fa);
+  margin: 0;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+  transition: background 0.3s ease-in-out;
+}
+
+.calculator-container {
+  max-width: 400px;
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.calculator-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+  text-align: center;
+  color: #202124;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #5f6368;
+}
+
+select,
+input[type="number"] {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background-color: #f8f9fa;
+  outline: none;
+}
+
+select:focus,
+input[type="number"]:focus {
+  border-color: #4285f4;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+  background-color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #357ae8;
+  transform: scale(1.02);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  background-color: #2d69c4;
+  transform: scale(1);
+  box-shadow: none;
+}
+
+.error,
+.result {
+  margin-top: 16px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.2s ease-in-out;
+}
+
+.error {
+  color: #ea4335;
+}
+
+.result {
+  color: #34a853;
+}
+
+@media (max-width: 400px) {
+  .calculator-container {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  label,
+  select,
+  input[type="number"],
+  button,
+  .error,
+  .result {
+    font-size: 15px;
+  }
+}
+
+/* Smooth focus transition for accessibility */
+input,
+select,
+button {
+  transition: outline-color 0.2s ease-in-out, outline-width 0.2s ease-in-out;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 2px solid #4285f4;
+  outline-offset: 4px;
+}
+
+/* Subtle animation for button presses */
+button:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
