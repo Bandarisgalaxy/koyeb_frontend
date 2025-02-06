@@ -2,15 +2,19 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to bottom, #e8f0fe, #f5f7fa);
   margin: 0;
   padding: 24px;
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   min-height: 100vh;
   color: #333;
-  transition: background 0.3s ease-in-out;
+    /* Use background-image and url() to set the image */
+  background-image: url("imagebg.jpeg"); /* Replace with your image URL */
+  background-size: cover; /* or contain, auto, 100% 100%, etc. - see below */
+  background-repeat: no-repeat; /* or repeat, repeat-x, repeat-y */
+  background-position: center; /* or top, bottom, left, right, specific percentages */
+  transition: background 0.3s ease-in-out; /* If you still want a transition */
 }
 
 .calculator-container {

@@ -295,7 +295,7 @@ function Calculator() {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:8080/api/calculate', {
+      const response = await fetch('https://excellent-emili-bandarisgalaxy-5799a647.koyeb.app/api/calculate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
